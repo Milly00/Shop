@@ -55,7 +55,8 @@ li {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    margin: auto;
+    margin-top: 20%;
+    margin-left: 45%;
 }
 
 @keyframes girar {
