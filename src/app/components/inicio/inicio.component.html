@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <app-navbar [autenticado]="false"></app-navbar>
+
+    <div class="body">
+        <div class="row row-padre">
+            <div class="col col-left">
+                <img class="img1" src="../../../assets/End of season sale.png" alt="">
+            </div>
+            <div class="col col-right">
+                <div class="row fila1">
+                    <div class="col col-icono">
+                        <img src="../../../assets/icons8-shop-64.png" alt="">
+                    </div>
+                    <div class="col col-texto">
+                        <p>Aqui encontraras las mejores prendas que haran parte de tu dia a dia , en nuestro catalogo encontraras infinidad de productos que no sabras con cual quedarte al final</p>
+                    </div>
+                </div>
+                <div class="row fila2">
+                    <form action="">
+                        <label for=""> Usuario</label>
+                        <input class="form-control" type="text" placeholder="Usuario">
+                        <label for=""> Contraseña</label>
+
+                        <input class="form-control" type="password" placeholder="contraseña" aria-label="default input example">
+
+                        <button class="btn btn-warning" type="submit"> Ingresar </button>
+
+                        <button class="btn btn-primary" (click)="loginGoogle()" type="button"> Google </button>
+                    </form>
+                </div>
+                <div class="row"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

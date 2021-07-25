@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crud-35d5f": {
+      "hosting": {
+        "Shop": [
+          "crud-35d5f"
+        ]
+      }
+    }
+  }
+}

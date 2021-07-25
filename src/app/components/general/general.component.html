@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-navbar [autenticado]="true"></app-navbar>
+
+    <div *ngIf="this.cargando === false" class="preloader"></div>
+    <div class="body">
+        <div *ngIf="this.cargando ===true" class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col" *ngFor="let item of productos">
+                <div class="card card-columns">
+                    <img [src]="item.img" [routerLink]="['/detalle', item.oid]" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div *ngIf="this.cargando ===true" class="row row-bottom">
+                            <div class="col1"> ${{item.prec}} </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

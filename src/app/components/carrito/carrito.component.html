@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <app-navbar [autenticado]="true"></app-navbar>
+    <div class="preloader" *ngIf="this.cargando === false"></div>
+    <div class="card-header" *ngIf="this.cargando === true">
+        <p>Estos son los productos que has guardado</p>
+    </div>
+    <div class="col" *ngIf="this.cargando === true">
+        <div *ngFor="let item of productos" class="card">
+
+            <ul class="list-group list-group-flush">
+                <li [routerLink]="['/compra', item.oid, item.idc]" class="list-group-item">{{item.nombre}}</li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

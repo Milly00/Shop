@@ -1,0 +1,27 @@
+/*NAVBAR*/
+
+.button-nav {
+    background-color: #B27DDB;
+    color: white;
+    border-radius: 2px;
+    margin-left: 40%;
+}
+
+.nav-item .nav-link {
+    color: #7DAEDB;
+    margin: 0% 10% 0% 10%;
+}
+
+.navbar-nav {
+    margin-left: 20%;
+}
+
+.dropdown {
+    width: 30%;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    right: 0;
+}

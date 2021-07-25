@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/general" class="nav-link">General</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">New</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/carrito" tabindex="-1" aria-disabled="true">Carrito</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Traducir <i class="fa fa-globe" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Español <img src="https://image.flaticon.com/icons/png/512/330/330557.png" alt=""></a></li>
+                        <li><a class="dropdown-item" href="#">Ingles <img src="https://image.flaticon.com/icons/png/512/330/330459.png" alt=""></a></li>
+                        <li><a class="dropdown-item" href="#">Portugues <img src="https://image.flaticon.com/icons/png/512/630/630591.png" alt=""></a></li>
+
+
+                    </ul>
+                </li>
+            </ul>
+            <button *ngIf="this.autenticado === false" class="btn button-nav" routerLink="/login"> Iniciar sesión</button>
+            <button routerLink="/" (click)="logout()" *ngIf="this.autenticado === true" class="btn button-nav"> Logout </button>
+        </div>
+    </div>
+</nav>
