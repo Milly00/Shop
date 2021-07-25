@@ -24,14 +24,14 @@
                     {{this.producto.nam}}
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio: {{this.producto.prec}}</li>
-                    <li class="list-group-item">Proveedor: {{this.producto.prov}}</li>
-                    <li class="list-group-item"> Unidades disponibles: {{this.producto.dis}}</li>
+                    <li class="list-group-item"> {{'Precio:' | translate }} {{this.producto.prec}}</li>
+                    <li class="list-group-item"> {{'Proveedor:' | translate }} {{this.producto.prov}}</li>
+                    <li class="list-group-item"> {{'Unidades disponibles:' | translate }} {{this.producto.dis}}</li>
                 </ul>
             </div>
 
-            <button class="btn btn-comprar"> Comprar</button>
-            <button class="btn btn-carrito" (click)="eliminarProducto()"> Eliminar del carrito</button>
+            <button class="btn btn-comprar"> {{'Comprar' | translate }} </button>
+            <button class="btn btn-carrito" (click)="eliminarProducto()"> {{'Eliminar del carrito' | translate }}</button>
 
         </div>
     </div>

@@ -21,9 +21,16 @@ import { DetalleProductoComponent } from './components/detalle-producto/detalle-
 import swal from 'sweetalert';
 
 //Translation
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
+
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslationComponent } from './translation/translation.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -37,10 +44,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CompraComponent,
     FooterComponent,
     NavbarComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    TranslationComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule,
     AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig), AngularFirestoreModule,
     TranslateModule.forRoot({
       loader: {
@@ -53,6 +61,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     })
   ],
   providers: [AngularFirestore],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [TranslateModule]
 })
 export class AppModule { }

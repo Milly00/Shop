@@ -13,7 +13,7 @@
     <app-navbar [autenticado]="true"></app-navbar>
     <div class="preloader" *ngIf="this.cargando === false"></div>
     <div class="card-header" *ngIf="this.cargando === true">
-        <p>Estos son los productos que has guardado</p>
+        <p>{{'Estos son los productos que has guardado' }}</p>
     </div>
     <div class="col" *ngIf="this.cargando === true">
         <div *ngFor="let item of productos" class="card">

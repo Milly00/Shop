@@ -19,18 +19,18 @@
 
                 <div class="row fila2">
                     <form action="">
-                        <label for=""> Usuario</label>
+                        <label for=""> {{'Usuario' | translate }} </label>
                         <input class="form-control" type="text" placeholder="Usuario">
-                        <label for=""> Contraseña</label>
+                        <label for=""> {{'Contraseña' | translate }} </label>
 
                         <input class="form-control" type="password" placeholder="contraseña" aria-label="default input example">
 
                         <a routerLink="/registro">
-                            <p>¿No tienes una cuenta? Registrate</p>
+                            <p>{{'¿No tienes una cuenta? Registrate'| translate}}</p>
                         </a>
-                        <button class="btn btn-warning" type="submit"> Ingresar </button>
+                        <button class="btn btn-warning" type="submit"> {{'Ingresar' | translate }}  </button>
 
-                        <button class="btn btn-primary" (click)="loginGoogle()" type="button"> Google </button>
+                        <button class="btn btn-primary" (click)="loginGoogle()" type="button"> {{'Google' | translate }}  </button>
                     </form>
                 </div>
 

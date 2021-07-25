@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Producto } from 'src/app/data/producto.interface';
 import { CarritoService } from 'src/app/services/carrito.service';
 import { ShopService } from 'src/app/services/shop.service';
@@ -19,7 +20,7 @@ export class CompraComponent implements OnInit {
   cargando: boolean = true;
 
   constructor(private router: ActivatedRoute, private serviceShop: ShopService ,
-    private serviceCarrito: CarritoService , private route:Router) { }
+    private serviceCarrito: CarritoService , private route:Router , translate: TranslateService) { }
 
   ngOnInit(): void {
     this.cargando = false;
@@ -54,7 +55,7 @@ this.serviceShop.getProducto(this.oid).subscribe(data=>{
         
         this.route.navigateByUrl("/carrito");
       } else {
-        swal("¡Tu producto esta a salvo!");
+        swal("¡Tu producto esta a salvo! ");
       }
     });
   }
